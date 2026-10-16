@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* Palette and type measured from the live WordPress site. */
+@theme {
+  --color-navy: #0b1f3a;
+  --color-wine: #5a1025;
+  --color-wine-deep: #550f23;
+  --color-rose: #801f3a;
+  --color-ink: #060606;
+  --color-electric: #287bff;
+  --color-royal: #1746d1;
+  --color-chip: #f5f5f5;
+
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-albert: var(--font-albert-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-manrope: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-roboto: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  --font-grotesk: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: var(--font-albert);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@utility wrap {
+  @apply mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-3;
+}
+
+/* Section headline used across the theme (52px Albert Sans, tight tracking). */
+@utility sec-title {
+  @apply font-albert text-[34px] leading-[1.08] font-semibold tracking-[-0.03em] text-white sm:text-[44px] lg:text-[52px];
+}
+
+/* Inner-page backdrop: black core fading to wine at the edges. */
+@utility bg-wine-glow {
+  background: radial-gradient(ellipse 62% 58% at 50% 50%, #000 12%, #2c0812 55%, #5a1025 100%);
+}
+
+/* Faint blueprint grid used behind the services section. */
+@utility bg-grid {
+  background-color: #060606;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Scroll-reveal (see components/reveal.tsx) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
