@@ -23,7 +23,7 @@ const icons = [
 const info = [
   { title: "Address", value: site.address },
   { title: "Emails Address", value: site.email, href: `mailto:${site.email}` },
-  { title: "Call Us", value: "+4420 8980 9731", href: site.phoneHref },
+  { title: "Call Us", value: site.phone, href: site.phoneHref },
 ];
 
 export default function ContactPage() {

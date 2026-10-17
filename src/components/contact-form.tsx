@@ -13,13 +13,13 @@ type Field = { name: string; label: string; type: string; placeholder: string; r
 
 const homeFields: Field[] = [
   { name: "name", label: "name", type: "text", placeholder: "e.g. Oliver Spiteri", required: true },
-  { name: "phone", label: "phone", type: "tel", placeholder: "e.g. +1 877 217 8371" },
+  { name: "phone", label: "phone", type: "tel", placeholder: "e.g. (555) 123-4567" },
   { name: "email", label: "email", type: "email", placeholder: "example@email.com", required: true },
 ];
 
 const pageFields: Field[] = [
   { name: "name", label: "Name", type: "text", placeholder: "e.g. Oliver Spiteri", required: true },
-  { name: "phone", label: "Phone", type: "tel", placeholder: "+44 20 8980 9731" },
+  { name: "phone", label: "Phone", type: "tel", placeholder: "(555) 123-4567" },
   { name: "email", label: "Email", type: "email", placeholder: "info@example.com", required: true },
 ];
 

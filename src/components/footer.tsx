@@ -48,8 +48,7 @@ export function Footer() {
             <h4 className="font-albert text-5xl leading-[1.2] font-medium sm:text-[80px]">Get In Touch</h4>
             <div className="mt-12 space-y-[15px] font-sans text-base leading-[31px] font-medium tracking-[2px] uppercase sm:mt-[90px] sm:text-xl">
               <a href={`mailto:${site.email}`} className="block hover:text-white/60">{site.email}</a>
-              <a href={site.phoneHref} className="block hover:text-white/60">{site.phone.replace("+44 20", "+4420")}</a>
-              <p>{site.address}</p>
+              <a href={site.phoneHref} className="block hover:text-white/60">{site.phone}</a>
             </div>
           </div>
         </div>

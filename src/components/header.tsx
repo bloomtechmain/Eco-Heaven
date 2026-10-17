@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { instagram, nav, searchTags, site } from "@/lib/content";
-import { Clock, Close, Mail, Phone, Search, SocialIcon } from "./icons";
+import { Close, Mail, Phone, Search, SocialIcon } from "./icons";
 
 const topSocials = ["facebook", "linkedin", "twitter", "instagram"];
 
@@ -63,9 +63,6 @@ export function Header() {
                   <Phone width={15} height={15} /> {site.phone}
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Clock width={15} height={15} /> {site.hours}
-              </li>
             </ul>
             <div className="flex items-center">
               {topSocials.map((s) => (
@@ -98,10 +95,10 @@ export function Header() {
               </ul>
             </nav>
 
-            <div className="ml-auto flex h-full items-center gap-7">
+            <div className="ml-auto flex h-full items-center gap-7 xl:pr-8">
               <Link
                 href="/smart-living"
-                className="hidden border border-royal bg-white px-[23px] py-2 font-albert text-[17px] leading-[25.5px] font-medium whitespace-nowrap text-ink transition-colors hover:bg-wine hover:text-white sm:block"
+                className="hidden border border-royal bg-white px-[26px] py-2.5 font-albert text-[17px] leading-[25.5px] font-medium whitespace-nowrap text-ink transition-colors hover:bg-wine hover:text-white sm:block"
               >
                 Explore The Future
               </Link>
@@ -111,13 +108,13 @@ export function Header() {
                 className="flex items-center gap-3 font-sans text-base text-white/40 transition-colors hover:text-white"
               >
                 <Search width={20} height={20} className="text-white" strokeWidth={2.4} />
-                <span className="hidden whitespace-nowrap min-[1400px]:inline">Search Here ...</span>
+                <span className="hidden whitespace-nowrap xl:inline">Search Here ...</span>
               </button>
               <button
                 type="button"
                 aria-label="Open menu"
                 onClick={() => setDrawer(true)}
-                className="grid h-full w-[72px] shrink-0 place-items-center bg-wine"
+                className="grid h-full w-[72px] shrink-0 place-items-center bg-wine xl:hidden"
               >
                 <span className="grid grid-cols-3 gap-[5px]">
                   {Array.from({ length: 9 }).map((_, i) => (

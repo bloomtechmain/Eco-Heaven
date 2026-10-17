@@ -5,10 +5,9 @@ export const m = (file: string) => `/media/${file}`;
 
 export const site = {
   name: "EcooHaven",
-  email: "info@demo.com",
-  phone: "+44 20 8980 9731",
-  phoneHref: "tel:+442089809731",
-  hours: "Mon - Fri 8:30 - 17:30, Sat - Sun off",
+  email: "info@smartecoheaven.com",
+  phone: "(323) 949-5323",
+  phoneHref: "tel:+13239495323",
   address: "4140 Parker Rd. Allentown, New Mexico 31134",
   mapQuery: "London Eye, London, United Kingdom",
   socials: [
