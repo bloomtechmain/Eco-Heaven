@@ -43,7 +43,7 @@ export function ServicesAccordion() {
                   <div className="relative -mx-[13px] h-[90px] w-[74px] overflow-hidden">
                     <Image src={s.image} alt="" fill sizes="74px" className="object-cover grayscale" />
                   </div>
-                  <h4 className="-mx-6 w-[118px] truncate text-center font-albert text-2xl leading-[1.2] font-semibold tracking-[-0.02em] uppercase">
+                  <h4 className="max-h-[430px] rotate-180 overflow-hidden font-albert text-xl leading-[1.2] font-semibold tracking-[-0.02em] text-ellipsis whitespace-nowrap uppercase [writing-mode:vertical-rl]">
                     {s.homeTitle ?? s.title}
                   </h4>
                 </div>
