@@ -148,9 +148,6 @@ export default function Home() {
           <SectionLabel className="mb-[60px]">services</SectionLabel>
         </div>
         <div className="relative flex items-end gap-0 lg:pl-[476px]">
-          <div className="absolute bottom-0 left-0 hidden h-[353px] w-[226px] border-[15px] border-r-0 border-[#1f1f1f] lg:block" data-reveal>
-            <Image src={m("ChatGPT-Image-Sep-17-2026-03_45_02-AM.png")} alt="" fill sizes="226px" className="object-cover" />
-          </div>
           <div className="w-full px-4 lg:px-0">
             <ServicesAccordion />
           </div>
