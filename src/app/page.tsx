@@ -81,7 +81,7 @@ export default function Home() {
 
       {/* Portrait video */}
       <section
-        className="flex flex-col items-center justify-center gap-8 px-4 py-[70px] md:flex-row md:gap-12"
+        className="flex flex-col items-center justify-center gap-8 px-4 py-[70px]"
         style={{ background: "radial-gradient(at left center, #801f3a 0%, #000 100%)" }}
       >
         <VideoDuo first={m("Abdul-jabbar-new-video.mp4")} second={whyChoose.video} poster={whyChoose.videoPoster} />
