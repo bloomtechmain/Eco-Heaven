@@ -59,7 +59,7 @@ export function SectionLabel({ children, className = "" }: { children?: ReactNod
 }
 
 /** 400px banner with centred uppercase Roboto title used on every inner page. */
-export function PageBanner({ title, image = m("6713611fb8a26c8e1a159c9ff6796e37.jpg") }: { title: string; image?: string }) {
+export function PageBanner({ title, image = m("6713611fb8a26c8e1a159c9ff6796e37.jpg") }: { title: React.ReactNode; image?: string }) {
   return (
     <section className="relative isolate grid h-[260px] place-items-center overflow-hidden px-4 sm:h-[400px]">
       <Image src={image} alt="" fill preload sizes="100vw" className="-z-10 object-cover" />

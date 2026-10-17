@@ -16,6 +16,7 @@
   --font-manrope: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   --font-roboto: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
   --font-grotesk: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-logo: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
 
   --animate-fade-up: fade-up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 

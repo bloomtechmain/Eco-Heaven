@@ -27,7 +27,7 @@ export function Footer() {
       <div className="wrap relative">
         <div className="grid gap-12 pb-16 lg:grid-cols-2 lg:pb-[118px]">
           <div>
-            <Link href="/" aria-label="EcooHaven home" className="inline-block">
+            <Link href="/" aria-label="Smart Eco Heaven home" className="inline-block">
               <Image src="/media/logo.png" alt="Smart Eco Heaven" width={1536} height={1024} className="h-auto w-[200px]" sizes="200px" />
             </Link>
             <div className="mt-14 flex gap-[120px]">

@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Close } from "./icons";
 
+const isFile = (url: string) => /\.(mp4|webm|mov)$/i.test(url);
+
 const toEmbed = (url: string) => {
   const id = new URL(url).searchParams.get("v") ?? url.split("/").pop();
   return `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
 };
 
-export function VideoPopup({ url, className = "" }: { url: string; className?: string }) {
+export function VideoPopup({ url, poster, className = "" }: { url: string; poster?: string; className?: string }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -46,15 +48,29 @@ export function VideoPopup({ url, className = "" }: { url: string; className?: s
             <button type="button" aria-label="Close video" className="absolute top-5 right-5 text-white">
               <Close width={32} height={32} />
             </button>
-            <div className="aspect-video w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
-              <iframe
-                src={toEmbed(url)}
-                title="EcooHaven video"
-                allow="autoplay; encrypted-media; picture-in-picture"
-                allowFullScreen
-                className="h-full w-full"
-              />
-            </div>
+            {isFile(url) ? (
+              <div className="max-h-full max-w-full" onClick={(e) => e.stopPropagation()}>
+                <video
+                  src={url}
+                  poster={poster}
+                  controls
+                  autoPlay
+                  playsInline
+                  preload="metadata"
+                  className="max-h-[88vh] max-w-full bg-black"
+                />
+              </div>
+            ) : (
+              <div className="aspect-video w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
+                <iframe
+                  src={toEmbed(url)}
+                  title="Smart Eco Heaven video"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                  className="h-full w-full"
+                />
+              </div>
+            )}
           </div>,
           document.body,
         )}

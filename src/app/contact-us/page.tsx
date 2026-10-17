@@ -34,7 +34,7 @@ export default function ContactPage() {
       <div className="bg-wine-glow pt-[110px] pb-[100px]">
         <section className="grid gap-12 px-[10px] lg:grid-cols-[628px_1fr] lg:gap-20">
           <div className="relative aspect-[628/700] overflow-hidden rounded-[15px] shadow-[0_0_16px_-4px_#000]" data-reveal>
-            <Image src={m("Modern-Glass-Mansion-at-Sunset.png")} alt="EcooHaven residence" fill sizes="(min-width: 1024px) 628px, 100vw" className="object-cover" />
+            <Image src={m("Modern-Glass-Mansion-at-Sunset.png")} alt="Smart Eco Heaven residence" fill sizes="(min-width: 1024px) 628px, 100vw" className="object-cover" />
           </div>
           <div className="px-4 pt-4 lg:max-w-[707px] lg:px-0" data-reveal>
             <h6 className="mb-2 pl-[10px] font-albert text-lg leading-[27px] font-medium">Contact Us</h6>

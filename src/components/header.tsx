@@ -43,7 +43,7 @@ export function Header() {
       <header className="relative z-50 flex h-[76px] bg-black lg:h-[116px]">
         <Link
           href="/"
-          aria-label="EcooHaven home"
+          aria-label="Smart Eco Heaven home"
           className="flex w-[130px] shrink-0 items-center justify-center bg-wine p-3 lg:w-[220px] lg:p-5"
         >
           <Image src="/media/logo.png" alt="Smart Eco Heaven" width={1536} height={1024} preload sizes="120px" className="h-auto w-[100px]" />

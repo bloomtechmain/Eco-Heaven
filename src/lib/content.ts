@@ -4,7 +4,7 @@
 export const m = (file: string) => `/media/${file}`;
 
 export const site = {
-  name: "EcooHaven",
+  name: "Smart Eco Heaven",
   email: "info@smartecoheaven.com",
   phone: "(323) 949-5323",
   phoneHref: "tel:+13239495323",
@@ -82,7 +82,7 @@ export const coreFeatures = [
 
 export const aboutTeaser = {
   title: "Building A Smarter Future Through Innovative Architecture.",
-  text: "At Smart Ecoo Haven, we create homes that think, adapt, and evolve. By combining modern architecture, AI technology, smart lighting, automation, and sustainable design, we create smarter, more comfortable living spaces for the future.",
+  text: "At Smart Eco Heaven, we create homes that think, adapt, and evolve. By combining modern architecture, AI technology, smart lighting, automation, and sustainable design, we create smarter, more comfortable living spaces for the future.",
   features: [
     {
       title: "modern Design",
@@ -110,7 +110,7 @@ export const services = [
     pageImage: m("Fortified-Luxury-Home-at-Dusk.png"),
     short: "Fireproof, rustproof and seismic-resistant construction.",
     image: m("ChatGPT-Image-Sep-17-2026-02_47_11-AM.png"),
-    text: "EcooHaven homes are designed with advanced safety and long-term protection in mind. High-performance construction materials and intelligent security solutions provide enhanced protection against fire, environmental conditions, and everyday risks. Every element is selected to create a secure and resilient living environment where homeowners can enjoy luxury with greater confidence and peace of mind.",
+    text: "Smart Eco Heaven homes are designed with advanced safety and long-term protection in mind. High-performance construction materials and intelligent security solutions provide enhanced protection against fire, environmental conditions, and everyday risks. Every element is selected to create a secure and resilient living environment where homeowners can enjoy luxury with greater confidence and peace of mind.",
   },
   {
     title: "Tesla Powerwall",
@@ -125,7 +125,7 @@ export const services = [
     pageImage: m("AI-Face-Recognition-Entry.png"),
     short: "Keyless, AI-powered secure entry.",
     image: m("ChatGPT-Image-Sep-17-2026-02_58_22-AM.png"),
-    text: "AI Face Recognition brings advanced technology directly into your home’s security system. Intelligent facial recognition can identify authorized residents and provide a seamless, keyless entry experience. By combining smart identification with connected security technology, EcooHaven creates a safer and more convenient environment while giving homeowners greater control over access to their property.",
+    text: "AI Face Recognition brings advanced technology directly into your home’s security system. Intelligent facial recognition can identify authorized residents and provide a seamless, keyless entry experience. By combining smart identification with connected security technology, Smart Eco Heaven creates a safer and more convenient environment while giving homeowners greater control over access to their property.",
   },
   {
     title: "Heated Floors + Smart Curtains",
@@ -171,16 +171,17 @@ export const expertiseTags = [
 ];
 
 export const whyChoose = {
-  label: "WHY CHOOSE SMART ECOO HAVEN",
+  label: "WHY CHOOSE SMART ECO HEAVEN",
   title: "Where Luxury Architecture Meets Intelligent Living.",
-  text: "Smart Ecoo Haven combines modern architecture, smart technology, sustainable energy, and premium design to create homes built for comfort, security, and the future.",
+  text: "Smart Eco Heaven combines modern architecture, smart technology, sustainable energy, and premium design to create homes built for comfort, security, and the future.",
   progress: [
     { label: "SMART TECHNOLOGY", value: 95 },
     { label: "SUSTAINABLE DESIGN", value: 90 },
     { label: "LUXURY ARCHITECTURE", value: 98 },
     { label: "ENERGY EFFICIENCY", value: 92 },
   ],
-  video: "https://www.youtube.com/watch?v=TdTudAOl37s",
+  video: m("smart-eco-heaven.mp4"),
+  videoPoster: m("smart-eco-heaven-poster.jpg"),
   cards: [
     {
       title: "Target Buyers",
@@ -212,17 +213,16 @@ export const recentWorks = [
 
 export const about = {
   intro:
-    "EcooHaven is redefining modern living by bringing together intelligent technology, sustainable energy, and luxury architecture. We create homes designed to think, adapt, and evolve with the people who live in them.",
+    "Smart Eco Heaven is redefining modern living by bringing together intelligent technology, sustainable energy, and luxury architecture. We create homes designed to think, adapt, and evolve with the people who live in them.",
   story: [
-    "At EcooHaven, we believe the home of the future should be more than beautiful. It should make everyday life smarter, safer, more comfortable, and more sustainable.",
+    "At Smart Eco Heaven, we believe the home of the future should be more than beautiful. It should make everyday life smarter, safer, more comfortable, and more sustainable.",
     "Our approach combines modern architectural design with AI-powered technology, smart automation, renewable energy, intelligent security, and premium interiors. From smart lighting and automated curtains to solar energy and advanced home systems, every element is designed to work together seamlessly.",
     "We focus on creating residences where technology feels natural and luxury feels effortless.",
   ],
   vision:
     "Our vision is to create homes that combine architectural excellence with intelligent technology and sustainable innovation. We aim to make future-ready living more accessible, efficient, and extraordinary.",
   mission:
-    "Our mission is to transform the way people experience their homes through smart technology, sustainable solutions, and exceptional design. Every EcooHaven home is built around comfort, efficiency, security, and long-term value.",
-  image: m("ChatGPT-Image-Sep-17-2026-04_18_14-AM.png"),
+    "Our mission is to transform the way people experience their homes through smart technology, sustainable solutions, and exceptional design. Every Smart Eco Heaven home is built around comfort, efficiency, security, and long-term value.",
   cta: {
     title: "Experience The Future Of Luxury Living",
     text: "Step into a new generation of living where intelligent technology, sustainable energy, and exceptional architecture come together. Discover homes designed to make everyday life smarter, safer, and more luxurious.",
@@ -240,7 +240,7 @@ export const smartLiving: {
   {
     title: "Smart Security at the Gate",
     parts: [
-      "A hyper-realistic showcase of the EcooHaven smart home entrance, combining ",
+      "A hyper-realistic showcase of the Smart Eco Heaven smart home entrance, combining ",
       { highlight: "AI facial recognition, smart access control, CCTV surveillance, automated gate technology, and architectural security lighting" },
       " into one seamless luxury experience. The visual presents security as an integrated part of the home’s modern concrete architecture, delivering ",
       { highlight: "privacy, protection, and intelligent access without compromising luxury." },
@@ -339,7 +339,7 @@ export const posts: Post[] = [
     title: "The Future of Luxury Living: How Smart Homes Are Changing Modern Life",
     date: "2026-10-07",
     category,
-    author: "EcooHaven",
+    author: "Smart Eco Heaven",
     image: m("ChatGPT-Image-Sep-17-2026-03_53_52-AM.png"),
     body: [
       { p: "Luxury living is no longer just about beautiful architecture and premium interiors. Today, a truly modern home combines intelligent technology, sustainability, security, and comfort to create a smarter way of living." },
@@ -353,7 +353,7 @@ export const posts: Post[] = [
       { p: "From heated floors and smart curtains to intelligent climate control and signature LED lighting, technology can create a home environment that automatically adapts to your lifestyle." },
       { h2: "The Future of Luxury Living" },
       { p: "The future of luxury is not simply about having more. It is about living smarter." },
-      { strong: "EcooHaven brings together intelligent technology, sustainable energy, advanced security, and modern architecture to create homes designed for the future." },
+      { strong: "Smart Eco Heaven brings together intelligent technology, sustainable energy, advanced security, and modern architecture to create homes designed for the future." },
     ],
   },
   {
@@ -361,7 +361,7 @@ export const posts: Post[] = [
     title: "AI-Powered Smart Homes: The Next Generation of Intelligent Living",
     date: "2026-10-07",
     category,
-    author: "EcooHaven",
+    author: "Smart Eco Heaven",
     image: m("ChatGPT-Image-Sep-17-2026-03_56_03-AM.png"),
     body: [
       { p: "AI is transforming the way we interact with our homes. Modern smart homes can connect lighting, security, climate control, energy systems, and everyday devices into one intelligent environment." },
@@ -375,7 +375,7 @@ export const posts: Post[] = [
       { p: "AI can work alongside solar panels, battery storage, and connected appliances to help manage energy more efficiently. This creates a smarter approach to sustainable and independent living." },
       { h2: "The Future of Intelligent Living" },
       { p: "AI-powered homes are becoming more than connected houses. They are evolving into intelligent environments designed around comfort, security, efficiency, and convenience." },
-      { strong: "EcooHaven combines AI technology, smart automation, sustainable energy, and luxury architecture to create homes designed for the next generation of living." },
+      { strong: "Smart Eco Heaven combines AI technology, smart automation, sustainable energy, and luxury architecture to create homes designed for the next generation of living." },
     ],
   },
   {
@@ -383,7 +383,7 @@ export const posts: Post[] = [
     title: "Sustainable Luxury: How Solar Energy and Smart Technology Are Redefining Modern Homes",
     date: "2026-10-07",
     category,
-    author: "EcooHaven",
+    author: "Smart Eco Heaven",
     image: m("ChatGPT-Image-Sep-17-2026-03_58_31-AM.png"),
     body: [
       { p: "Luxury living is evolving beyond beautiful design. Today, modern homeowners want homes that offer comfort, intelligent technology, and greater energy efficiency. Sustainable luxury brings these elements together to create a smarter way of living." },
@@ -396,7 +396,7 @@ export const posts: Post[] = [
       { h2: "Luxury Without Compromise" },
       { p: "Sustainable homes no longer need to sacrifice style or comfort. Modern architecture, premium interiors, smart lighting, automated systems, and renewable energy can work together to create an exceptional living experience." },
       { h2: "The Future of Sustainable Luxury" },
-      { p: "The future of luxury living is intelligent, efficient, and environmentally conscious. EcooHaven combines sustainable energy, smart technology, and modern architecture to create homes designed for a better tomorrow." },
+      { p: "The future of luxury living is intelligent, efficient, and environmentally conscious. Smart Eco Heaven combines sustainable energy, smart technology, and modern architecture to create homes designed for a better tomorrow." },
     ],
   },
 ];

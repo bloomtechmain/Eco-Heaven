@@ -39,7 +39,7 @@ export function Gallery({ images }: { images: string[] }) {
           >
             <Image
               src={src}
-              alt={`EcooHaven home ${i + 1}`}
+              alt={`Smart Eco Heaven home ${i + 1}`}
               fill
               sizes="(min-width: 1024px) 364px, (min-width: 640px) 50vw, 100vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"

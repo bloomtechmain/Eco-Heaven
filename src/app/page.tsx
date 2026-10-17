@@ -125,7 +125,7 @@ export default function Home() {
 
             <div className="relative pb-24 lg:pb-0">
               <div className="relative aspect-[540/710] w-full max-w-[540px] overflow-hidden lg:ml-[45px]" data-reveal>
-                <Image src={aboutTeaser.image} alt="EcooHaven residence" fill sizes="540px" className="object-cover" />
+                <Image src={aboutTeaser.image} alt="Smart Eco Heaven residence" fill sizes="540px" className="object-cover" />
               </div>
               <div className="absolute bottom-0 left-[60px] bg-white pt-6 pr-[23px] lg:top-[432px] lg:bottom-auto lg:left-[105px]" data-reveal>
                 <Link href="/our-homes" className="group relative isolate block h-[334px] w-[262px] overflow-hidden px-[25px] py-[45px]">
@@ -174,7 +174,7 @@ export default function Home() {
               <OutlineButton href="/smart-living" className="mt-4 ml-4">Explore Smart Living</OutlineButton>
             </div>
             <div className="relative aspect-[632/478] overflow-hidden" data-reveal>
-              <Image src={keyFeatures.image} alt="EcooHaven home at night" fill sizes="(min-width: 1024px) 632px, 100vw" className="object-cover" />
+              <Image src={keyFeatures.image} alt="Smart Eco Heaven home at night" fill sizes="(min-width: 1024px) 632px, 100vw" className="object-cover" />
             </div>
           </div>
         </div>
@@ -184,8 +184,6 @@ export default function Home() {
 
       {/* Why choose */}
       <section className="relative isolate overflow-hidden bg-ink">
-        <Image src={m("maxresdefault-2.jpg")} alt="" fill sizes="100vw" className="-z-10 object-cover grayscale" />
-        <div className="absolute inset-0 -z-10 bg-black/45" />
         <div className="grid lg:min-h-[950px] lg:grid-cols-[812px_1fr]">
           <div className="bg-navy px-4 pt-[120px] pb-[95px] sm:px-10 lg:pr-0 lg:pl-[72px]">
             <SectionLabel className="mb-[60px]">{whyChoose.label}</SectionLabel>
@@ -207,9 +205,11 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="relative grid min-h-[420px] place-items-center lg:block">
+          <div className="relative isolate grid min-h-[420px] place-items-center overflow-hidden lg:block">
+            <Image src={whyChoose.videoPoster} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="-z-10 object-cover object-top" />
+            <div className="absolute inset-0 -z-10 bg-black/25" />
             <div className="lg:absolute lg:top-[300px] lg:left-[194px]">
-              <VideoPopup url={whyChoose.video} />
+              <VideoPopup url={whyChoose.video} poster={whyChoose.videoPoster} />
             </div>
           </div>
         </div>
