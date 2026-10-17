@@ -15,11 +15,21 @@ const montserrat = localFont({ src: "./fonts/montserrat.woff2", variable: "--fon
 const grotesk = localFont({ src: "./fonts/space-grotesk.woff2", variable: "--font-space-grotesk", weight: "300 700", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  // Absolute URLs for link previews: set NEXT_PUBLIC_SITE_URL to the live domain; Cloudflare Pages' build URL is the fallback.
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? process.env.CF_PAGES_URL ?? "http://localhost:3000"),
   title: { default: "Smart Eco Heaven", template: "%s – Smart Eco Heaven" },
   description:
     "Smart, sustainable luxury homes combining AI-powered technology, solar energy, and modern architecture.",
-  icons: { icon: "/media/cropped-favicon.webp" },
+  icons: { icon: "/media/favicon.png", apple: "/media/favicon.png" },
+  openGraph: {
+    type: "website",
+    siteName: "Smart Eco Heaven",
+    title: "Smart Eco Heaven",
+    description:
+      "Smart, sustainable luxury homes combining AI-powered technology, solar energy, and modern architecture.",
+    images: [{ url: "/media/og-image.jpg", width: 1200, height: 630, alt: "Smart Eco Heaven – Integrated Smart Luxury Homes" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/media/og-image.jpg"] },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
