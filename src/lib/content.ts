@@ -9,7 +9,7 @@ export const site = {
   phone: "(323) 949-5323",
   phoneHref: "tel:+13239495323",
   address: "4140 Parker Rd. Allentown, New Mexico 31134",
-  region: "We are located in California",
+  region: "We are based in California",
   socials: [
     { label: "facebook", href: "#" },
     { label: "instagram", href: "#" },
