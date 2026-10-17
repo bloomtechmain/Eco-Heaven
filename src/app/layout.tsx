@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Albert_Sans, DM_Sans, Manrope, Roboto, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
 import { BackToTop } from "@/components/back-to-top";
 import "./globals.css";
 
-const albert = Albert_Sans({ variable: "--font-albert-sans", subsets: ["latin"] });
-const dmSans = DM_Sans({ variable: "--font-dm-sans", subsets: ["latin"] });
-const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"] });
-const roboto = Roboto({ variable: "--font-roboto", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
-const grotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: ["latin"] });
+// Self-hosted variable fonts (latin subset), so the build doesn't depend on Google Fonts.
+const albert = localFont({ src: "./fonts/albert-sans.woff2", variable: "--font-albert-sans", weight: "100 900", display: "swap" });
+const dmSans = localFont({ src: "./fonts/dm-sans.woff2", variable: "--font-dm-sans", weight: "100 1000", display: "swap" });
+const manrope = localFont({ src: "./fonts/manrope.woff2", variable: "--font-manrope", weight: "200 800", display: "swap" });
+const roboto = localFont({ src: "./fonts/roboto.woff2", variable: "--font-roboto", weight: "100 900", display: "swap" });
+const grotesk = localFont({ src: "./fonts/space-grotesk.woff2", variable: "--font-space-grotesk", weight: "300 700", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),

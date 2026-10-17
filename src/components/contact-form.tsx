@@ -1,7 +1,13 @@
 "use client";
 
-import { useActionState } from "react";
-import { sendContact, type ContactState } from "@/app/actions";
+import { useState, type FormEvent } from "react";
+import emailjs from "@emailjs/browser";
+
+type ContactState = { ok: boolean; message: string } | null;
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const CONTACT_TO_EMAIL = "info@smartecoheaven.com";
+const SEND_FAILED = `Sorry, we couldn't send your message. Please try again or email ${CONTACT_TO_EMAIL}.`;
 
 type Field = { name: string; label: string; type: string; placeholder: string; required?: boolean };
 
@@ -18,7 +24,54 @@ const pageFields: Field[] = [
 ];
 
 export function ContactForm({ variant = "home" }: { variant?: "home" | "page" }) {
-  const [state, action, pending] = useActionState<ContactState, FormData>(sendContact, null);
+  const [state, setState] = useState<ContactState>(null);
+  const [pending, setPending] = useState(false);
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = String(data.get("name") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+
+    if (!name || !email || !message) {
+      setState({ ok: false, message: "Please fill in your name, email and message." });
+      return;
+    }
+    if (!EMAIL_RE.test(email)) {
+      setState({ ok: false, message: "Please enter a valid email address." });
+      return;
+    }
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("[contact] EmailJS environment variables are not configured");
+      setState({ ok: false, message: SEND_FAILED });
+      return;
+    }
+
+    setPending(true);
+    setState(null);
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        { name, phone: phone || "Not provided", email, message, to_email: CONTACT_TO_EMAIL, reply_to: email },
+        { publicKey },
+      );
+      form.reset();
+      setState({ ok: true, message: "Thank you for your message. It has been sent." });
+    } catch (err) {
+      console.error("[contact] EmailJS request failed", err);
+      setState({ ok: false, message: SEND_FAILED });
+    } finally {
+      setPending(false);
+    }
+  }
   const page = variant === "page";
   const fields = page ? pageFields : homeFields;
 
@@ -28,7 +81,7 @@ export function ContactForm({ variant = "home" }: { variant?: "home" | "page" })
   const label = "block font-sans text-sm font-semibold tracking-[1.5px] uppercase";
 
   return (
-    <form action={action} className={page ? "space-y-12" : "space-y-[22px]"}>
+    <form onSubmit={onSubmit}className={page ? "space-y-12" : "space-y-[22px]"}>
       {fields.map((f) => (
         <label key={f.name} className="block">
           <span className={page ? "sr-only" : label}>{f.label}</span>
