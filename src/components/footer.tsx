@@ -49,6 +49,7 @@ export function Footer() {
             <div className="mt-12 space-y-[15px] font-sans text-base leading-[31px] font-medium tracking-[2px] uppercase sm:mt-[90px] sm:text-xl">
               <a href={`mailto:${site.email}`} className="block hover:text-white/60">{site.email}</a>
               <a href={site.phoneHref} className="block hover:text-white/60">{site.phone}</a>
+              <p>{site.region}</p>
             </div>
           </div>
         </div>

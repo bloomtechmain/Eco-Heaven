@@ -21,7 +21,7 @@ const icons = [
 ];
 
 const info = [
-  { title: "Address", value: site.address },
+  { title: "Address", value: site.region },
   { title: "Emails Address", value: site.email, href: `mailto:${site.email}` },
   { title: "Call Us", value: site.phone, href: site.phoneHref },
 ];

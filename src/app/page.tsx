@@ -4,9 +4,8 @@ import { ContactForm } from "@/components/contact-form";
 import { ArrowUpRight } from "@/components/icons";
 import { ServicesAccordion } from "@/components/services-accordion";
 import { OutlineButton, SectionLabel } from "@/components/ui";
-import { VideoPopup } from "@/components/video-popup";
+import { VideoDuo } from "@/components/video-duo";
 import { aboutTeaser, coreFeatures, keyFeatures, m, posts, whyChoose } from "@/lib/content";
-import { formatDate } from "@/lib/content";
 
 /** Simple line icons for the two about-section features (original artwork). */
 const featureIcons = [
@@ -46,7 +45,7 @@ export default function Home() {
             </h2>
             <p className="mt-5 max-w-[570px] font-manrope text-[17px] leading-7 text-white">
               Experience a new generation of homes where AI-powered technology, smart lighting, and sustainable design
-              come together for a smarter way to live.
+              come together for a smarter way to live. All homes are CBC (California Building Code) and Title 24 compliant.
             </p>
             <Link
               href="/our-homes"
@@ -82,19 +81,10 @@ export default function Home() {
 
       {/* Portrait video */}
       <section
-        className="flex justify-center px-4 py-[70px]"
+        className="flex flex-col items-center justify-center gap-8 px-4 py-[70px] md:flex-row md:gap-12"
         style={{ background: "radial-gradient(at left center, #801f3a 0%, #000 100%)" }}
       >
-        <video
-          src={m("Abdul-jabbar-new-video.mp4")}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          controlsList="nodownload"
-          className="aspect-[353/628] w-full max-w-[353px] rounded-[20px] bg-black object-cover"
-        />
+        <VideoDuo first={m("Abdul-jabbar-new-video.mp4")} second={whyChoose.video} poster={whyChoose.videoPoster} />
       </section>
 
       {/* About */}
@@ -182,39 +172,6 @@ export default function Home() {
 
       <div className="h-[100px] bg-black" />
 
-      {/* Why choose */}
-      <section className="relative isolate overflow-hidden bg-ink">
-        <div className="grid lg:min-h-[950px] lg:grid-cols-[812px_1fr]">
-          <div className="bg-navy px-4 pt-[120px] pb-[95px] sm:px-10 lg:pr-0 lg:pl-[72px]">
-            <SectionLabel className="mb-[60px]">{whyChoose.label}</SectionLabel>
-            <h2 className="sec-title mb-6 max-w-[600px]" data-reveal>{whyChoose.title}</h2>
-            <p className="mb-[47px] max-w-[565px] font-sans text-lg leading-7" data-reveal>{whyChoose.text}</p>
-            <div className="max-w-[537px] space-y-8">
-              {whyChoose.progress.map((p) => (
-                <div key={p.label} data-reveal>
-                  <h5 className="mb-[15px] flex justify-between font-albert text-sm leading-[22px] font-semibold uppercase">
-                    <span>{p.label}</span>
-                    <span>{p.value}%</span>
-                  </h5>
-                  <div className="relative h-px bg-white/40">
-                    <div className="absolute inset-y-0 left-0 bg-white" style={{ width: `${p.value}%` }}>
-                      <span className="absolute -top-1.5 right-0 h-3.5 w-px bg-white" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative isolate grid min-h-[420px] place-items-center overflow-hidden lg:block">
-            <Image src={whyChoose.videoPoster} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="-z-10 object-cover object-top" />
-            <div className="absolute inset-0 -z-10 bg-black/25" />
-            <div className="lg:absolute lg:top-[300px] lg:left-[194px]">
-              <VideoPopup url={whyChoose.video} poster={whyChoose.videoPoster} />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Blog */}
       <section className="bg-black pt-[95px] pb-[125px]">
         <div className="wrap">
@@ -227,7 +184,7 @@ export default function Home() {
             {posts.map((p) => (
               <article key={p.slug} className="group" data-reveal>
                 <Link href={`/${p.slug}`} className="relative block h-[500px] overflow-hidden">
-                  <Image src={p.image} alt={p.title} fill sizes="(min-width: 1024px) 411px, 50vw" className="object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0" />
+                  <Image src={p.image} alt={p.title} fill sizes="(min-width: 1024px) 411px, 50vw" className="object-cover transition duration-700 group-hover:scale-105" />
                 </Link>
                 <div className="relative z-10 -mt-[30px] mr-8 ml-auto grid size-[60px] place-items-center bg-chip text-ink">
                   <ArrowUpRight width={22} height={22} />
@@ -238,10 +195,6 @@ export default function Home() {
                 <h4 className="mb-[22px] font-albert text-[28px] leading-[32px] font-semibold tracking-[-0.56px] capitalize">
                   <Link href={`/${p.slug}`} className="hover:text-white/70">{p.title}</Link>
                 </h4>
-                <p className="flex gap-6 border-y border-white/50 py-3 font-sans text-base capitalize">
-                  <Link href={`/category/${p.category.slug}`} className="font-medium hover:text-white/70">{p.category.name}</Link>
-                  <time dateTime={p.date}>{formatDate(p.date)}</time>
-                </p>
               </article>
             ))}
           </div>

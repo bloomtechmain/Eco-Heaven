@@ -9,6 +9,7 @@ export const site = {
   phone: "(323) 949-5323",
   phoneHref: "tel:+13239495323",
   address: "4140 Parker Rd. Allentown, New Mexico 31134",
+  region: "We are located in California",
   socials: [
     { label: "facebook", href: "#" },
     { label: "instagram", href: "#" },
@@ -113,12 +114,12 @@ export const services = [
     text: "Smart Eco Heaven homes are designed with advanced safety and long-term protection in mind. High-performance construction materials and intelligent security solutions provide enhanced protection against fire, environmental conditions, and everyday risks. Every element is selected to create a secure and resilient living environment where homeowners can enjoy luxury with greater confidence and peace of mind.",
   },
   {
-    title: "Tesla Powerwall",
+    title: "Whole house backup batteries",
     pageImage: m("Tesla-Powerwall-at-Sunset.png"),
     homeTitle: "whole house backup batteries",
     short: "Energy storage and reduced energy waste.",
     image: m("ChatGPT-Image-Sep-17-2026-02_56_02-AM.png"),
-    text: "Powerwall provides intelligent energy storage that allows your home to make better use of solar power. Excess energy generated during the day can be stored and used when needed, including during power interruptions. This helps improve energy independence, maintain essential home systems, and create a more reliable and efficient power solution for modern living.",
+    text: "Whole house backup batteries provide intelligent energy storage that allows your home to make better use of solar power. Excess energy generated during the day can be stored and used when needed, including during power interruptions. This helps improve energy independence, maintain essential home systems, and create a more reliable and efficient power solution for modern living.",
   },
   {
     title: "AI Face Recognition",
@@ -148,7 +149,7 @@ export const keyFeatures = {
   intro:
     "Smart technology, sustainable energy, advanced security, and luxury design come together to create a smarter way of living.",
   items: [
-    { title: "100% Solar + Powerwall", text: "Greater energy independence with smart power storage." },
+    { title: "100% Solar + Whole House Backup Batteries", text: "Greater energy independence with smart power storage." },
     { title: "AI-Powered Security", text: "Advanced protection with intelligent security technology." },
     { title: "Luxury Architecture", text: "Premium finishes, Italian-style kitchens, and heated floors." },
     { title: "Smart Living", text: "Automated lighting, curtains, climate, and home systems." },
@@ -217,6 +218,7 @@ export const about = {
   story: [
     "At Smart Eco Heaven, we believe the home of the future should be more than beautiful. It should make everyday life smarter, safer, more comfortable, and more sustainable.",
     "Our approach combines modern architectural design with AI-powered technology, smart automation, renewable energy, intelligent security, and premium interiors. From smart lighting and automated curtains to solar energy and advanced home systems, every element is designed to work together seamlessly.",
+    "Backed by 20 years of industry leading knowledge and experience, we bring proven expertise to every home we build.",
     "We focus on creating residences where technology feels natural and luxury feels effortless.",
   ],
   vision:
@@ -293,7 +295,7 @@ export const smartLiving: {
     title: "Smart Energy & Solar Independence",
     parts: [
       "A next-generation energy system combining a ",
-      { highlight: "high-performance solar roof, smart inverter, Tesla Powerwall, energy monitoring, and intelligent energy distribution" },
+      { highlight: "high-performance solar roof, smart inverter, whole house backup batteries, energy monitoring, and intelligent energy distribution" },
       ". The integrated system helps the home generate, store, monitor, and manage its own energy while maintaining the luxury lifestyle inside. From rooftop solar generation to advanced energy storage, every component works together to create a ",
       { highlight: "smarter, more sustainable home" },
       ".",
@@ -346,7 +348,7 @@ export const posts: Post[] = [
       { h2: "Smart Technology for Modern Living" },
       { p: "Smart homes connect lighting, climate control, security, curtains, appliances, and entertainment into one intelligent ecosystem. AI-powered automation allows these systems to respond to your routines and preferences, making everyday life more convenient." },
       { h2: "Sustainable Energy & Smart Power" },
-      { p: "Solar energy and intelligent battery storage are transforming how luxury homes use electricity. A 100% Solar Roof combined with a Powerwall can help increase energy independence, improve efficiency, and provide reliable power when it is needed." },
+      { p: "Solar energy and intelligent battery storage are transforming how luxury homes use electricity. A 100% Solar Roof combined with whole house backup batteries can help increase energy independence, improve efficiency, and provide reliable power when it is needed." },
       { h2: "Advanced Security" },
       { p: "Modern luxury homes are becoming safer with smart security technology. AI-powered facial recognition, intelligent cameras, access control, and connected monitoring provide homeowners with greater control and peace of mind." },
       { h2: "Comfort Without Compromise" },
