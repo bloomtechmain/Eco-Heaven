@@ -9,7 +9,6 @@ export const site = {
   phone: "(323) 949-5323",
   phoneHref: "tel:+13239495323",
   address: "4140 Parker Rd. Allentown, New Mexico 31134",
-  mapQuery: "London Eye, London, United Kingdom",
   socials: [
     { label: "facebook", href: "#" },
     { label: "instagram", href: "#" },
@@ -27,20 +26,8 @@ export const nav = [
   { label: "Contact", href: "/contact-us" },
 ];
 
-export const footerNav = [
-  [
-    { label: "home", href: "/" },
-    { label: "about us", href: "/about-us" },
-    { label: "services", href: "/our-services" },
-    { label: "our homes", href: "/our-homes" },
-  ],
-  [
-    { label: "Blog", href: "/blog" },
-    { label: "Contact Us", href: "/contact-us" },
-    { label: "privacy policy", href: "#" },
-    { label: "terms and conditions", href: "#" },
-  ],
-];
+// Footer page links mirror the header nav.
+export const footerNav = [nav.slice(0, 3), nav.slice(3)];
 
 export const instagram = [
   "V3-mp4-image.jpg",

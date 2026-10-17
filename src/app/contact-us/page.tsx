@@ -63,13 +63,6 @@ export default function ContactPage() {
           </div>
         </section>
       </div>
-
-      <iframe
-        title={site.mapQuery}
-        src={`https://maps.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&t=m&z=15&output=embed&iwloc=near`}
-        loading="lazy"
-        className="block h-[500px] w-full"
-      />
     </>
   );
 }
