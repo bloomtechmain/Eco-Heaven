@@ -13,11 +13,27 @@ export function VideoDuo({ first, second, poster }: { first: string; second: str
   const blocked = useRef(false);
   const sources = [first, second];
 
+  // Play with the current mute state; if the browser refuses sound, fall back to muted playback.
+  const start = (v: HTMLVideoElement) => {
+    v.muted = mutedRef.current;
+    v.play().catch(() => {
+      blocked.current = true;
+      v.muted = true;
+      mutedRef.current = true;
+      setMuted(true);
+      v.play().catch(() => {});
+    });
+  };
+
   useEffect(() => {
     mutedRef.current = muted;
-    videos.current.forEach((v) => {
-      if (v) v.muted = muted;
+    videos.current.forEach((v, i) => {
+      if (!v) return;
+      v.muted = muted;
+      // Unmuting without a real user gesture makes some browsers pause the video; resume it.
+      if (i === active && inView && v.paused) start(v);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [muted]);
 
   // Play (with sound) only while the carousel is on screen.
@@ -32,23 +48,14 @@ export function VideoDuo({ first, second, poster }: { first: string; second: str
   useEffect(() => {
     videos.current.forEach((v, i) => {
       if (!v) return;
-      if (i !== active || !inView) {
-        v.pause();
-        return;
-      }
-      v.muted = mutedRef.current;
-      v.play().catch(() => {
-        // Browser refused autoplay with sound (no user interaction yet): start muted, unmute on first interaction.
-        blocked.current = true;
-        v.muted = true;
-        setMuted(true);
-        v.play().catch(() => {});
-      });
+      if (i === active && inView) start(v);
+      else v.pause();
     });
   }, [active, inView]);
 
+  // Only a tap/click or key press counts as a real gesture; touchstart/pointerdown also fire while scrolling.
   useEffect(() => {
-    const events = ["pointerdown", "keydown", "touchstart"] as const;
+    const events = ["click", "keydown"] as const;
     const unlock = () => {
       if (!blocked.current) return;
       blocked.current = false;
