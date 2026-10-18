@@ -71,12 +71,13 @@ export function VideoDuo({ first, second, poster }: { first: string; second: str
             blocked.current = false;
             setMuted((m) => !m);
           }}
-          className="absolute top-3 right-3 z-10 grid h-10 w-10 place-items-center rounded-full bg-black/60 text-white backdrop-blur transition hover:bg-black/80"
+          className={`absolute top-3 right-3 z-10 flex h-10 items-center justify-center gap-2 rounded-full bg-black/60 text-white backdrop-blur transition hover:bg-black/80 ${muted ? "animate-pulse px-4 text-sm font-semibold" : "w-10"}`}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M11 5 6 9H2v6h4l5 4V5Z" />
             {muted ? <path d="m22 9-6 6m0-6 6 6" /> : <path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14" />}
           </svg>
+          {muted && <span>Tap for sound</span>}
         </button>
         <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${active * 100}%)` }}>
           {sources.map((src, i) => (
