@@ -44,9 +44,9 @@ export function Header() {
         <Link
           href="/"
           aria-label="Smart Eco Heaven home"
-          className="flex w-[130px] shrink-0 items-center justify-center bg-wine p-3 lg:w-[220px] lg:p-5"
+          className="flex w-[130px] shrink-0 items-center justify-center bg-[#01173b] p-1 lg:w-[220px] lg:p-2"
         >
-          <Image src="/media/logo.png" alt="Smart Eco Heaven" width={1536} height={1024} preload sizes="120px" className="h-auto w-[100px]" />
+          <Image src="/media/logo.png" alt="Smart Eco Heaven" width={700} height={418} preload sizes="220px" className="h-auto w-full" />
         </Link>
 
         <div className="flex min-w-0 flex-1 flex-col">
@@ -140,7 +140,7 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between">
-          <Link href="/"><Image src="/media/logo.png" alt="Smart Eco Heaven" width={1536} height={1024} className="h-auto w-[120px]" sizes="120px" /></Link>
+          <Link href="/"><Image src="/media/logo.png" alt="Smart Eco Heaven" width={700} height={418} className="h-auto w-[180px]" sizes="180px" /></Link>
           <button type="button" aria-label="Close menu" onClick={() => setDrawer(false)} className="grid size-11 place-items-center bg-wine">
             <Close />
           </button>
