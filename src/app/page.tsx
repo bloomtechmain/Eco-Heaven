@@ -5,7 +5,13 @@ import { ArrowUpRight } from "@/components/icons";
 import { ServicesAccordion } from "@/components/services-accordion";
 import { OutlineButton, SectionLabel } from "@/components/ui";
 import { VideoDuo } from "@/components/video-duo";
-import { aboutTeaser, coreFeatures, keyFeatures, m, posts, whyChoose } from "@/lib/content";
+import { aboutTeaser, coreFeatures, keyFeatures, m, posts, site, whyChoose } from "@/lib/content";
+
+const contactInfo = [
+  { title: "Address", value: site.region },
+  { title: "Email", value: site.email, href: `mailto:${site.email}` },
+  { title: "Call Us", value: site.phone, href: site.phoneHref },
+];
 
 /** Simple line icons for the two about-section features (original artwork). */
 const featureIcons = [
@@ -163,8 +169,8 @@ export default function Home() {
               </div>
               <OutlineButton href="/smart-living" className="mt-4 ml-4">Explore Smart Living</OutlineButton>
             </div>
-            <div className="relative aspect-[632/478] overflow-hidden" data-reveal>
-              <Image src={keyFeatures.image} alt="Smart Eco Heaven home at night" fill sizes="(min-width: 1024px) 632px, 100vw" className="object-cover" />
+            <div className="relative aspect-[1121/2000] w-full max-w-[480px] overflow-hidden lg:h-full lg:w-auto lg:justify-self-center" data-reveal>
+              <Image src={keyFeatures.image} alt="Smart Eco Heaven luxury villa" fill sizes="(min-width: 1024px) 300px, 100vw" className="object-cover" />
             </div>
           </div>
         </div>
@@ -202,17 +208,32 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section className="relative bg-black pt-[260px] lg:pt-[460px]">
-        <div className="absolute inset-x-0 top-0 h-[520px] lg:h-[800px]">
-          <Image src={m("maxresdefault-2.jpg")} alt="" fill sizes="100vw" className="object-cover" />
-        </div>
-        <div className="wrap relative flex flex-col lg:flex-row lg:items-start">
-          <div className="bg-wine-deep px-6 py-12 sm:px-[60px] sm:py-[68px] lg:w-[707px]" data-reveal>
-            <h5 className="mb-[29px] font-albert text-3xl leading-[43px] font-bold capitalize sm:text-4xl">Get In Touch With Us Today!</h5>
-            <ContactForm />
-          </div>
-          <div className="relative hidden h-[556px] w-[290px] lg:block" data-reveal>
-            <Image src={m("1cb336768b5f86357fd27bc977097806.jpg")} alt="" fill sizes="290px" className="object-cover" />
+      <section className="pt-[95px] pb-[125px]" style={{ background: "linear-gradient(#000 21%, #5a1025 100%)" }}>
+        <div className="wrap">
+          <SectionLabel className="mb-[60px]">contact us</SectionLabel>
+          <div className="grid gap-14 lg:grid-cols-[1fr_707px] lg:gap-20">
+            <div data-reveal>
+              <h2 className="sec-title mb-6 max-w-[543px]">Let’s talk about your dream home.</h2>
+              <p className="mb-12 max-w-[506px] font-sans text-lg leading-7">
+                Tell us about your project and our team will get back to you with smart, sustainable and luxurious ideas.
+              </p>
+              <div className="border-t border-white/15">
+                {contactInfo.map((it) => (
+                  <div key={it.title} className="border-b border-white/15 py-6">
+                    <h4 className="mb-2 font-albert text-xl leading-[21.5px] font-semibold tracking-[-0.6px] capitalize">{it.title}</h4>
+                    {it.href ? (
+                      <a href={it.href} className="font-sans text-lg leading-7 hover:text-white/70">{it.value}</a>
+                    ) : (
+                      <p className="font-sans text-lg leading-7">{it.value}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-wine-deep px-6 py-12 sm:px-[60px] sm:py-[68px]" data-reveal>
+              <h5 className="mb-[29px] font-albert text-3xl leading-[43px] font-bold capitalize sm:text-4xl">Get In Touch With Us Today!</h5>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>

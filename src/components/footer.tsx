@@ -28,7 +28,7 @@ export function Footer() {
         <div className="grid gap-12 pb-16 lg:grid-cols-2 lg:pb-[118px]">
           <div>
             <Link href="/" aria-label="Smart Eco Heaven home" className="inline-block">
-              <Image src="/media/logo.png" alt="Smart Eco Heaven" width={700} height={418} className="h-auto w-[260px]" sizes="260px" />
+              <Image src="/media/logo.png" alt="Smart Eco Heaven" width={1000} height={555} className="h-auto w-[260px]" sizes="260px" />
             </Link>
             <div className="mt-14 flex gap-[120px]">
               {footerNav.map((col, i) => (

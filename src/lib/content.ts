@@ -154,7 +154,7 @@ export const keyFeatures = {
     { title: "Luxury Architecture", text: "Premium finishes, Italian-style kitchens, and heated floors." },
     { title: "Smart Living", text: "Automated lighting, curtains, climate, and home systems." },
   ],
-  image: m("6713611fb8a26c8e1a159c9ff6796e37.jpg"),
+  image: m("key-features-villa.jpg"),
 };
 
 export const beforeAfter = {
