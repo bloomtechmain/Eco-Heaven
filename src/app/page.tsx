@@ -6,7 +6,7 @@ import { ServiceTags } from "@/components/service-tags";
 import { ServicesAccordion } from "@/components/services-accordion";
 import { OutlineButton, SectionLabel } from "@/components/ui";
 import { VideoDuo } from "@/components/video-duo";
-import { aboutTeaser, coreFeatures, keyFeatures, m, posts, site, whyChoose } from "@/lib/content";
+import { aboutTeaser, keyFeatures, m, posts, site, whyChoose } from "@/lib/content";
 
 const contactInfo = [
   { title: "Address", value: site.region },
@@ -63,28 +63,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* Core features */}
-      <section className="bg-black py-20">
-        <div className="h-px w-full bg-white" />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4">
-          {coreFeatures.map((f, i) => (
-            <div
-              key={f.title}
-              data-reveal
-              style={{ transitionDelay: `${i * 120}ms` }}
-              className={`my-12 px-[30px] ${i > 0 ? "lg:border-l lg:border-white" : ""} ${i % 2 ? "sm:border-l sm:border-white" : ""}`}
-            >
-              <div className="py-[30px] pr-[30px]">
-                <h4 className="mb-[45px] font-albert text-xl leading-[21.5px] font-semibold tracking-[-0.6px] capitalize">{f.title}</h4>
-                <Image src={f.icon} alt="" width={90} height={77} className="mb-10 h-[77px] w-[90px] object-contain invert" />
-                <p className="font-sans text-lg leading-7">{f.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="h-px w-full bg-white" />
       </section>
 
       {/* Portrait video */}
