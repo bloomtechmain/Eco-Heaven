@@ -171,6 +171,35 @@ export const expertiseTags = [
   "3D Architectural Modeling",
 ];
 
+export const serviceTags = [
+  "Home Automation with Voice Recognition",
+  "Off-Grid & On-Grid Solar System",
+  "Italian-Style Automated Aluminum Kitchen Cabinets",
+  "Top-Loaded Dishwasher",
+  "Aluminum & Steel Wardrobe",
+  "Solar-Generating Visible Glass Windows",
+  "Fully Automated Lighting System",
+  "Remote-Controlled Mesh",
+  "Remote-Controlled Gates",
+  "Fully Sensor Strip Lighting",
+  "Low-Noise High-Pressure Kitchen Blowers",
+  "Smart Toilets with Bluetooth Speakers",
+  "Rotating Shoe Racks",
+  "AGI (Artificial General Intelligence)",
+  "Outdoor Cameras",
+  "Face Recognition & Video-Calling Front Door",
+  "Sensor Detection",
+  "Sprinkler System",
+  "Jacuzzi",
+  "Pool",
+  "Sauna",
+  "Fish Tank",
+  "Water Ponds",
+  "Outdoor BBQ Kitchen",
+  "Fully Sensored Step Lighting",
+  "Smart Bathroom Mirror",
+];
+
 export const whyChoose = {
   label: "WHY CHOOSE SMART ECO HEAVEN",
   title: "Where Luxury Architecture Meets Intelligent Living.",

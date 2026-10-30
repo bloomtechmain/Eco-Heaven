@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 import { ArrowUpRight } from "@/components/icons";
+import { ServiceTags } from "@/components/service-tags";
 import { ServicesAccordion } from "@/components/services-accordion";
 import { OutlineButton, SectionLabel } from "@/components/ui";
 import { VideoDuo } from "@/components/video-duo";
@@ -32,6 +33,7 @@ export default function Home() {
         <video
           className="absolute inset-0 -z-10 h-full w-full object-cover"
           src={m("hero-bg.mp4")}
+          poster={m("hero-poster.jpg")}
           autoPlay
           muted
           loop
@@ -149,6 +151,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Service tags */}
+      <ServiceTags />
 
       {/* Key features */}
       <section className="pt-[130px] pb-[100px]" style={{ background: "linear-gradient(#000 21%, #5a1025 100%)" }}>
