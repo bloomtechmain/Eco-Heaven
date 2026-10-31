@@ -6,7 +6,7 @@ import { ServiceTags } from "@/components/service-tags";
 import { ServicesAccordion } from "@/components/services-accordion";
 import { OutlineButton, SectionLabel } from "@/components/ui";
 import { VideoDuo } from "@/components/video-duo";
-import { aboutTeaser, keyFeatures, m, posts, site, whyChoose } from "@/lib/content";
+import { aboutTeaser, keyFeatures, m, posts, site } from "@/lib/content";
 
 const contactInfo = [
   { title: "Address", value: site.region },
@@ -70,7 +70,7 @@ export default function Home() {
         className="flex flex-col items-center justify-center gap-8 px-4 py-[70px]"
         style={{ background: "radial-gradient(at left center, #801f3a 0%, #000 100%)" }}
       >
-        <VideoDuo first={m("Abdul-jabbar-new-video.mp4")} second={whyChoose.video} poster={whyChoose.videoPoster} />
+        <VideoDuo first={m("home-video-1.mp4")} second={m("home-video-2.mp4")} />
       </section>
 
       {/* About */}
