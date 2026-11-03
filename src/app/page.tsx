@@ -128,7 +128,7 @@ export default function Home() {
       <section className="pt-[130px] pb-[100px]" style={{ background: "linear-gradient(#000 21%, #5a1025 100%)" }}>
         <div className="wrap">
           <SectionLabel className="mb-[60px]" />
-          <div className="grid gap-14 lg:grid-cols-2 lg:gap-[120px]">
+          <div className="grid gap-14">
             <div data-reveal>
               <h2 className="sec-title mb-[60px] max-w-[543px]">{keyFeatures.title}</h2>
               <div className="max-w-[543px] font-sans text-lg leading-7">
@@ -142,9 +142,6 @@ export default function Home() {
                 ))}
               </div>
               <OutlineButton href="/smart-living" className="mt-4 ml-4">Explore Smart Living</OutlineButton>
-            </div>
-            <div className="relative aspect-[1121/2000] w-full max-w-[480px] overflow-hidden lg:h-full lg:w-auto lg:justify-self-center" data-reveal>
-              <Image src={keyFeatures.image} alt="Smart Eco Heaven luxury villa" fill sizes="(min-width: 1024px) 300px, 100vw" className="object-cover" />
             </div>
           </div>
         </div>
